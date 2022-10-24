@@ -28,3 +28,9 @@ Timestamp: Thu Oct 20 2022 12:06:23 GMT+0200 (Central European Summer Time)
 URL: /favicon.ico
 Timestamp: Thu Oct 20 2022 12:06:23 GMT+0200 (Central European Summer Time)
 
+URL: /
+Timestamp: Thu Oct 20 2022 14:59:04 GMT+0200 (Central European Summer Time)
+
+URL: /favicon.ico
+Timestamp: Thu Oct 20 2022 14:59:05 GMT+0200 (Central European Summer Time)
+
