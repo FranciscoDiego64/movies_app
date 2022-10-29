@@ -1,14 +1,134 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>DOCUMENTATION</title>
-  </head>
-  <body>
-    <h1>Index page</h1>
+<!DOCTYPE HTML>
+ <html>
+     <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <title>Documentation - Movie API</title>
+         <link href="style.css" rel="stylesheet" type="text/css" />
+     </head>
+         <header>
+          <h2>Documentation - Movie API</h2>
+     </header>
+         <body>
+             <P>This is a movie API, which contains movie description, genre, director, image URL. 
+                The web application will provide users with access to information about different movies, directors, and genres.
+                Users will be able to sign up, update their personal information, and create a list of their favorite movies.
+            </P>
+            <div>
+            <h3>Features</h3>
+            <ul>
+                <li>Return a list of all movies to the user</li>
+                <li>Return data (description, genre, director, image URL, whether it is featured or not) about a single movie by title to the user</li>
+                <li>Return data about a genre (description) by name/title</li>
+                <li>Return data about a director (bio, birth year, death year) by name</li>
+                <li>Allow new users to register</li>
+                <li>Allow users to update their user info</li>
+                <li>Allow users to add a movie to their list of favorites</li>
+                <li>Allow users to remove a movie from their list of favorites</li>
+                <li>Allow existing users to deregister.</li>
+            </ul>
 
-    <p>I will add my documentation here :)</p>
-    
-  </body>
-</html>
+            </div>
+
+            <h3>API Endpoints</h3>
+            <table class="styled-table">
+                <thead>
+                   <tr class="active-row">
+                       <th>Buisness Logic</th>
+                       <th>URL</th>
+                       <th>HTTP Method</th>
+                       <th>Query Parameters</th>
+                       <th>Request body data format</th>
+                       <th>Response body data format</th>
+                   </tr>
+                </thead>
+          
+                <tbody>
+                   <tr class="active-row">
+                       <td>Get a list of all movies</td>
+                       <td>/movies</td>
+                       <td>GET</td>
+                       <td>-</td>
+                       <td>-</td>
+                       <td>A JSON object holding data about all the movies</td>
+                   </tr>
+          
+                   <tr class="active-row">
+                       <td>Get a single movie by title</td>
+                       <td>/movies/:title</td>
+                       <td>GET</td>
+                       <td>:title</td>
+                       <td>-</td>
+                       <td>A JSON object holding data about a single movie</td>
+                   </tr>
+          
+                   <tr class="active-row">
+                       <td>Get Genre by Name</td>
+                       <td>/movies/genre/:genreName</td>
+                       <td>GET</td>
+                       <td>:genreName</td>
+                       <td>-</td>
+                       <td>A JSON object holding data about the genre of a movie</td>
+                   </tr>
+          
+                   <tr class="active-row">
+                       <td>Get director data by name</td>
+                       <td>/movies/directors/:directorName</td>
+                       <td>GET</td>
+                       <td>:directorName</td>
+                       <td>-</td>
+                       <td>A JSON object holding data about the data of a director</td>
+                   </tr>
+          
+                   <tr class="active-row">
+                       <td>Allow new users to Register</td>
+                       <td>/users</td>
+                       <td>POST</td>
+                       <td>-</td>
+                       <td>A JSON object holding data about the users to add, structured like this { "name" : "Diego", "favorite movie" : [] } </td>
+                       <td>A JSON object holding data about the user that was added, structured like this { "name" : "Vincent", "favorite movie" : [] } including an ID </td>
+                   </tr>
+          
+                   <tr class="active-row">
+                       <td>Allow new users update their user info</td>
+                       <td>/users/:id</td>
+                       <td>PUT</td>
+                       <td>:id</td>
+                       <td>-</td>
+                       <td>A JSON object holding data about the updated information</td>
+                   </tr>
+          
+          
+                   <tr class="active-row">
+                       <td>Adds movie to favorite list</td>
+                       <td>/users/:id/:movieTitle</td>
+                       <td>POST</td>
+                       <td>:movieTitle</td>
+                       <td>-</td>
+                       <td>A text message indicating whether the Movie was added</td>
+                   </tr>
+          
+                   <tr class="active-row">
+                       <td>Delete movie from favorite list</td>
+                       <td>/users/:id/:movieTitle</td>
+                       <td>DELETE</td>
+                       <td>:movieTitle</td>
+                       <td>-</td>
+                       <td>A text message indicating whether the Movie was removed</td>
+                   </tr>
+          
+                   <tr class="active-row">
+                       <td>Allow existing users to deregister</td>
+                       <td>/users/:id</td>
+                       <td>DELETE</td>
+                       <td>:movieTitle</td>
+                       <td>-</td>
+                       <td>A text message indicating whether the User has deregistered</td>
+                   </tr>
+                </tbody>
+               </table>
+         </body>
+     <body>
+
+     </body>
+ </html>
