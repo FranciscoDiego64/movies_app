@@ -23,7 +23,7 @@ body {
   }
   
   .styled-table tbody tr {
-      border-bottom: 1px solid #dddddd;
+      border-bottom: .01px solid #dddddd;
   }
   
   .styled-table tbody tr:nth-of-type(even) {
@@ -31,7 +31,7 @@ body {
   }
   
   .styled-table tbody tr:last-of-type {
-      border-bottom: 2px solid #009879;
+      border-bottom: .8px solid #009879;
   }
   
   .styled-table tbody tr.active-row {
