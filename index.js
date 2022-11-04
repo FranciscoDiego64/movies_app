@@ -72,6 +72,18 @@ app.get('/users', (req, res) => {
     });
  });
 
+ //GET movie info
+
+ app.get('/movies/:Title', (req, res) => {
+  Movies.findOne({ Title: req.params.Title })
+    .then((title) => {
+      res.json(title);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    });
+});
 
 
 
@@ -86,6 +98,32 @@ app.get('/users/:Username', (req, res) => {
       console.error(err);
       res.status(500).send('Error: ' + err);
     });
+});
+
+//GET genre by name 
+
+app.get('/movies/genres/:Name', (req, res) => {
+  Movies.findOne({ "Genre.Name": req.params.Name })  
+    .then((movies) => {
+      res.json(movies.Genre);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    });
+});
+
+//GET Director by name
+
+app.get('/movies/directors/:Name', (req, res) => {
+  Movies.findOne({ "Director.Name": req.params.Name})
+  .then ((movies) => {
+    res.json(movies.Director);
+  })
+  .catch((err) => {
+    console.error(err);
+    res.status(500).send('Error: ' + err);
+  });
 });
 
 //UPDATE
