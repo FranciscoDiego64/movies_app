@@ -222,7 +222,7 @@ app.delete('/users/:Username', passport.authenticate('jwt', { session: false }),
 });
 
 
-  //READ
+  //READ TEST
   app.get('/testurl', (req, res) => {
       res.status(200).send('hello there');
     });
