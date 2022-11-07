@@ -223,10 +223,9 @@ app.delete('/users/:Username', passport.authenticate('jwt', { session: false }),
 
 
   //READ
-  /* app.get('/testurl', (req, res) => {
+  app.get('/testurl', (req, res) => {
       res.status(200).send('hello there');
     });
-    */
 
 
 
