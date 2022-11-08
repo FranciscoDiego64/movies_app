@@ -150,7 +150,7 @@ app.get('/movies/directors/:Name', passport.authenticate('jwt', { session: false
   });
 });
 
-//UPDATE
+//UPDATE PLEASE CHECK
 
 app.put('/users/:Username', passport.authenticate('jwt', { session: false }),
 
@@ -226,6 +226,15 @@ app.delete('/users/:Username', passport.authenticate('jwt', { session: false }),
   app.get('/testurl', (req, res) => {
       res.status(200).send('hello there');
     });
+
+    app.get('/', (req, res) => {
+      res.send('Welcome to Electric Cinema!');
+    });
+    
+    app.get('/documentation', (req, res) => {                  
+      res.sendFile('public/documentation.html', { root: __dirname });
+    });
+    
 
 
 
