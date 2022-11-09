@@ -17,6 +17,7 @@ const { check, validationResult } = require('express-validator');
 mongoose.connect( process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 //app.use(morgan('common'));
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -227,11 +228,11 @@ app.delete('/users/:Username', passport.authenticate('jwt', { session: false }),
       res.status(200).send('hello there');
     });
 
-    app.get('/', (req, res) => {
+  app.get('/', (req, res) => {
       res.send('Welcome to Electric Cinema!');
     });
     
-    app.get('/documentation', (req, res) => {                  
+  app.get('/documentation', (req, res) => {                  
       res.sendFile('public/documentation.html', { root: __dirname });
     });
     
