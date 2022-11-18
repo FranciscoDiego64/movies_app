@@ -14,9 +14,9 @@ const Users = Models.User;
 const { check, validationResult } = require('express-validator');
 
 //mongoose.connect('mongodb://localhost:27017/electricCinema', { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connect( process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+//mongoose.connect( process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
-// mongoose.connect( process.env.CONNECTION_URIV2, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect( process.env.CONNECTION_URIV2, { useNewUrlParser: true, useUnifiedTopology: true });
 
 //app.use(morgan('common'));
 app.use(express.static(__dirname + '/public'));
