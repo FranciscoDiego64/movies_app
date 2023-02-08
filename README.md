@@ -1,6 +1,6 @@
 # Electric Cinema
 The client-side of a movie tracking app allowing users to create an account, access information about different movies and save them to their list of favorites. Users can also update their personal information, and delete their account.
-The API for this application can be found on the [movie-api](https://github.com/franciscodiego64/movies-app) repo.
+The API for this application can be found on the [movie-api](https://github.com/FranciscoDiego64/movies_app) repo.
 
 ## Views and Features
 #### Main View
